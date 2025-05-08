@@ -1,37 +1,26 @@
 package entities;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class User {
 
-	private String userName;
-	private Date dateRegister;
+	private Integer code;
 
-	public User(String userName, Date dateRegister) {
-		this.userName = userName;
-		this.dateRegister = dateRegister;
+	public User(Integer code) {
+		this.code = code;
 	}
 
-	public String getUserName() {
-		return userName;
+	public Integer getCode() {
+		return code;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public Date getDateRegister() {
-		return dateRegister;
-	}
-
-	public void setDateRegister(Date dateRegister) {
-		this.dateRegister = dateRegister;
+	public void setCode(Integer code) {
+		this.code = code;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(userName);
+		return Objects.hash(code);
 	}
 
 	@Override
@@ -43,7 +32,7 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(userName, other.userName);
+		return Objects.equals(code, other.code);
 	}
 
 }

@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-import entities.User;
+import entities.LogRegister;
 
 public class Exercicio1 {
 
@@ -17,7 +17,7 @@ public class Exercicio1 {
 
 		Scanner sc = new Scanner(System.in);
 
-		Set<User> set = new HashSet<>();
+		Set<LogRegister> set = new HashSet<>();
 
 		System.out.print("Enter file full path: ");
 		String path = sc.nextLine();
@@ -28,7 +28,7 @@ public class Exercicio1 {
 				String[] fields = logRegister.split(" ");
 				String user = fields[0];
 				Date moment = Date.from(Instant.parse(fields[1]));
-				set.add(new User(user, moment));
+				set.add(new LogRegister(user, moment));
 
 				logRegister = br.readLine();
 			}
