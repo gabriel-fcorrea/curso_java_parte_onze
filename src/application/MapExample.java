@@ -14,6 +14,12 @@ public class MapExample {
 		cookies.put("phone", "99711122");
 
 		cookies.remove("email");
+		cookies.put("phone", "98765465"); // sobrescreve o valor da chave anterior
+
+		System.out.println("Contains 'phone' key: " + cookies.containsKey("phone"));
+		System.out.println("Phone number: " + cookies.get("phone"));
+		System.out.println("Email: " + cookies.get("email"));
+		System.out.println("Size: " + cookies.size());
 
 		System.out.println("ALL COOKIES:");
 
